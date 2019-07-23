@@ -6,7 +6,18 @@ namespace AlgorithmsAndDataStructuresUdemy
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CreateLinkedListAndLoop();
+            Console.ReadLine();
+        }
+
+        public static void CreateLinkedListAndLoop()
+        {
+            LinkedList linkedList = new LinkedList();
+            linkedList.head = new LinkedList.Node("First");
+            linkedList.head.next = new LinkedList.Node("Second");
+            linkedList.head.next.next = new LinkedList.Node("Third");
+
+            linkedList.TraverseAndPrint();
         }
     }
 }
