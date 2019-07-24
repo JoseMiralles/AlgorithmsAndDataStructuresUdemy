@@ -20,8 +20,7 @@ namespace AlgorithmsAndDataStructuresUdemy
             while (current != null)
             {
                 current = current.next;
-                if (current.Equals<T>(current.data, item))
-                    return current;
+                //TODO: Compare and return.
             }
             return null;
         }
