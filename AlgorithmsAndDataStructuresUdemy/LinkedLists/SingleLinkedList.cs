@@ -224,5 +224,17 @@ namespace AlgorithmsAndDataStructuresUdemy
             }
         }
 
+        #region Implementation examples.
+        public static SingleLinkedList<string> CreateAndPopulateStringList()
+        {
+            SingleLinkedList<String> list = new SingleLinkedList<string>();
+            for (int i = 0; i <= 10; i++)
+            {
+                list.Add("Node number " + i);
+            }
+            return list;
+        }
+        #endregion
+
     }
 }
