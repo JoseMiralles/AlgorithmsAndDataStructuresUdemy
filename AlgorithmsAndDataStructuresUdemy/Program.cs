@@ -6,8 +6,18 @@ namespace AlgorithmsAndDataStructuresUdemy
     {
         public static void Main(string[] args)
         {
-            SingleLinkedList<String>.CreateLinkedListAndLoop();
+            CreateListAndLoop();
             Console.ReadLine();
+        }
+
+        public static void CreateListAndLoop()
+        {
+            SingleLinkedList<String> list = new SingleLinkedList<string>();
+            for (int i = 0; i <= 10; i++)
+            {
+                list.Add("Node number " + i);
+            }
+            list.TraverseAndPrint();
         }
     }
 }
