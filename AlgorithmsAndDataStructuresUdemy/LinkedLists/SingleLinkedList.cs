@@ -1,11 +1,11 @@
 ﻿using System;
 namespace AlgorithmsAndDataStructuresUdemy
 {
-    public class LinkedList
+    public class SingleLinkedList
     {
         public Node head;
 
-        public LinkedList(Node head = null)
+        public SingleLinkedList(Node head = null)
         {
             this.head = head;
         }

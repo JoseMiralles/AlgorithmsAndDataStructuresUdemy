@@ -12,10 +12,10 @@ namespace AlgorithmsAndDataStructuresUdemy
 
         public static void CreateLinkedListAndLoop()
         {
-            LinkedList linkedList = new LinkedList();
-            linkedList.head = new LinkedList.Node("First");
-            linkedList.head.next = new LinkedList.Node("Second");
-            linkedList.head.next.next = new LinkedList.Node("Third");
+            SingleLinkedList linkedList = new SingleLinkedList();
+            linkedList.head = new SingleLinkedList.Node("First");
+            linkedList.head.next = new SingleLinkedList.Node("Second");
+            linkedList.head.next.next = new SingleLinkedList.Node("Third");
 
             linkedList.TraverseAndPrint();
         }
