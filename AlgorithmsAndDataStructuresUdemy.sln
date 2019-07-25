@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsAndDataStructuresUdemy", "AlgorithmsAndDataStructuresUdemy\AlgorithmsAndDataStructuresUdemy.csproj", "{2C6F3BF7-7150-40E5-BD12-5F4E23CB1B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{874F35B2-5776-473F-82F2-16195DB6AA26}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,9 +13,5 @@ Global
 		{2C6F3BF7-7150-40E5-BD12-5F4E23CB1B27}.Debug|x86.Build.0 = Debug|x86
 		{2C6F3BF7-7150-40E5-BD12-5F4E23CB1B27}.Release|x86.ActiveCfg = Release|x86
 		{2C6F3BF7-7150-40E5-BD12-5F4E23CB1B27}.Release|x86.Build.0 = Release|x86
-		{874F35B2-5776-473F-82F2-16195DB6AA26}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{874F35B2-5776-473F-82F2-16195DB6AA26}.Debug|x86.Build.0 = Debug|Any CPU
-		{874F35B2-5776-473F-82F2-16195DB6AA26}.Release|x86.ActiveCfg = Release|Any CPU
-		{874F35B2-5776-473F-82F2-16195DB6AA26}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
