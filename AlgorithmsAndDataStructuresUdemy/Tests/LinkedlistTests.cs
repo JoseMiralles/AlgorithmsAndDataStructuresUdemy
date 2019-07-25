@@ -8,12 +8,10 @@ namespace Tests
     public class LinkedlistTests
     {
         [Test]
-        public void GetLastItem()
+        public void TestContains()
         {
-            SingleLinkedList<String> list = GetStringList(20);
-            string lastItemString = list.GetLastItem().data;
-
-            Assert.NotNull(lastItemString);
+            SingleLinkedList<int> list = GetIntList(30);
+            Assert.IsTrue(list.Contains(25));
         }
 
         /// <summary>
@@ -26,7 +24,17 @@ namespace Tests
             SingleLinkedList<String> list = new SingleLinkedList<String>();
             for (int i = 0; i <= numberOfItems; i++)
             {
-                list.Add($"Item number {i}");
+                list.Add($"Item number {i}.");
+            }
+            return list;
+        }
+
+        public static SingleLinkedList<int> GetIntList(int numberOfItems)
+        {
+            SingleLinkedList<int> list = new SingleLinkedList<int>();
+            for (int i = 0; i<=numberOfItems;i++)
+            {
+                list.Add(i);
             }
             return list;
         }

@@ -8,15 +8,96 @@ namespace AlgorithmsAndDataStructuresUdemy
     /// Single Linked list that implements the IList<T> interface.
     /// </summary>
     /// <typeparam name="T">The type to hold</typeparam>
-    public class SingleLinkedList<T> : IList<T> where T : IComparable<T>
+    public class SingleLinkedList<T> : ICollection<T> where T : IComparable<T>
     {
-        public Node<T> head;
-
-        public T this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Node<T> head = null;
 
         public int Count => throw new NotImplementedException();
 
         public bool IsReadOnly => throw new NotImplementedException();
+
+        /// <summary>
+        /// Adds item at the end of the list.
+        /// </summary>
+        /// <param name="item"></param>
+        public void Add(T item)
+        {
+            if (head == null)
+                head = new Node<T>(item);
+            else
+                GetLastItem().next = new Node<T>(item);
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Checks if the item is on the list.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public bool Contains(T item)
+        {
+            if (head == null) return false;
+
+            Node<T> current = head;
+            while (current != null)
+            {
+                if (current.data.Equals(item))
+                    return true;
+                current = current.next;
+            }
+            return false;
+        }
+
+        public void CopyTo(T[] array, int arrayIndex)
+        {
+            Node<T> current = head;
+            while (current != null)
+            {
+                array[arrayIndex] = current.data;
+                current = current.next;
+                arrayIndex++;
+            }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Remove(T item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Node<T> Get(T item)
+        {
+            Node<T> current = head;
+            while (current != null)
+            {
+                if (current.data.Equals(item))
+                    return current;
+                current = current.next;
+            }
+            return null;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Node<T> GetLastItem()
+        {
+            if (head == null) return null;
+            Node<T> current = head;
+            while (current.next != null)
+                current = current.next;
+            return current;
+        }
 
         /// <summary>
         /// Traverses the whole list, and prints each item.
@@ -38,94 +119,6 @@ namespace AlgorithmsAndDataStructuresUdemy
                 }
                 return true;
             }
-        }
-
-        /// <summary>
-        /// Adds the given item at the end of the list.
-        /// </summary>
-        /// <param name="item">Item to add.</param>
-        public void Add(T item)
-        {
-            if (head == null)
-                head = new Node<T>(item);
-            else
-            {
-                Node<T> current = head;
-                while (current != null)
-                {
-                    if (current.next == null)
-                    {
-                        current.next = new Node<T>(item);
-                        return;
-                    }
-                    current = current.next;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Append an item at the end of the List.
-        /// </summary>
-        /// <param name="item">Item to append</param>
-        public void Append(T item)
-        {
-            this.GetLastItem().next = new Node<T>(item);
-        }
-
-        public void Clear()
-        {
-        }
-
-        public bool Contains(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void CopyTo(T[] array, int arrayIndex)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerator<T> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int IndexOf(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Insert(int index, T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveAt(int index)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Node<T> GetLastItem()
-        {
-            Node<T> current = head;
-            while (current != null)
-            {
-                if (current.next == null)
-                    return current;
-                current = current.next;
-            }
-            return current;
         }
 
         /// <summary>
