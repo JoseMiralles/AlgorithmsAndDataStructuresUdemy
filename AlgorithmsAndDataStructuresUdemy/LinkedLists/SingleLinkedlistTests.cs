@@ -5,7 +5,7 @@ using AlgorithmsAndDataStructuresUdemy;
 namespace Tests
 {
     [TestFixture]
-    public class LinkedlistTests
+    public class SingleLinkedlistTests
     {
         [Test]
         public void TestContains()

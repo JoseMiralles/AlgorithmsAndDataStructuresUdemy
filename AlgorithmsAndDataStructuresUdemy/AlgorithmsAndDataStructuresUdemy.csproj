@@ -39,7 +39,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LinkedLists\SingleLinkedList.cs" />
-    <Compile Include="LinkedLists\LinkedlistTests.cs" />
+    <Compile Include="LinkedLists\SingleLinkedlistTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LinkedLists\" />

@@ -28,7 +28,7 @@ namespace AlgorithmsAndDataStructuresUdemy
         public bool IsReadOnly => throw new NotImplementedException();
 
         /// <summary>
-        /// Adds item at the end of the list.
+        /// Adds item at the end of the list. O(n) RT
         /// </summary>
         /// <param name="item"></param>
         public void Add(T item)
@@ -37,6 +37,17 @@ namespace AlgorithmsAndDataStructuresUdemy
                 head = new Node<T>(item);
             else
                 GetLastItem().next = new Node<T>(item);
+        }
+
+        /// <summary>
+        /// Adds the given item at the start of the list. O(1) RT
+        /// </summary>
+        public void Prepend(T item)
+        {
+            Node<T> newNode = new Node<T>(item);
+            if (head != null && head.next != null)
+                newNode.next = head.next;
+            this.head = newNode;
         }
 
         /// <summary>
