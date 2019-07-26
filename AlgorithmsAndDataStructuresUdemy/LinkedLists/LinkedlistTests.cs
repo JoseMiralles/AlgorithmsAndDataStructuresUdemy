@@ -14,6 +14,14 @@ namespace Tests
             Assert.IsTrue(list.Contains(25));
         }
 
+        [Test]
+        public void TestCount()
+        {
+            SingleLinkedList<int> list = GetIntList(30);
+            Assert.AreEqual(30, list.Count);
+        }
+
+        #region helper section
         /// <summary>
         /// Creates and returns a SingleLinkedList full of strings.
         /// </summary>
@@ -38,5 +46,6 @@ namespace Tests
             }
             return list;
         }
+        #endregion
     }
 }

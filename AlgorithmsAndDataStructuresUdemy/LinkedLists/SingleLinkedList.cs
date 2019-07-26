@@ -12,7 +12,18 @@ namespace AlgorithmsAndDataStructuresUdemy
     {
         public Node<T> head = null;
 
-        public int Count => throw new NotImplementedException();
+        public int Count { //TODO: Returning one more than answer.
+            get { // O(n) implementation.
+                Node<T> current = head;
+                int count = 0;
+                while (current != null)
+                {
+                    count++;
+                    current = current.next;
+                }
+                return count;
+            }
+        }
 
         public bool IsReadOnly => throw new NotImplementedException();
 
@@ -26,6 +37,23 @@ namespace AlgorithmsAndDataStructuresUdemy
                 head = new Node<T>(item);
             else
                 GetLastItem().next = new Node<T>(item);
+        }
+
+        /// <summary>
+        /// Returns the predecessor of the node containing the given item.
+        /// </summary>
+        /// <returns></returns>
+        public Node<T> GetPredecessor(T item)
+        {
+            Node<T> current = head;
+            if (current.data.Equals(item))
+                return null; //The first item has no predecessor.
+            while (current != null)
+            {
+                if (current.next.data.Equals(item))
+                    return current; //Current is the predecessor.
+            }
+            return null; //Not found, return null.
         }
 
         public void Clear()
