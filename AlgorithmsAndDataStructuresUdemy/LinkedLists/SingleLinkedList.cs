@@ -160,10 +160,39 @@ namespace AlgorithmsAndDataStructuresUdemy
             }
         }
 
+        public void BubbleSort()
+        {
+            bool swapped = true;
+            Node<T> current = head;
+            Node<T> previous = null;
+
+            while (current != null)
+            {
+                //Return if no swapps happened in the last run beacuse it is already sorted.
+                if (swapped == false) return;
+
+                if (1 == current.data.CompareTo(current.next.data))
+                { //The node is smaller, swap them.
+                    if (current == head)
+                    {
+                        head = head.next;       // 2 is moved to 1
+                        head.next = current;    // 1 is moved to 2
+                    }
+                    else
+                    {
+                        previous.next = current.next;
+                        previous.next.next = current;
+                    }
+                }
+                previous = current;
+                current = current.next;
+            }
+        }
+
         /// <summary>
         /// Single linked node with a reference to the next item.
         /// </summary>
-        public class Node<T1> where T1 : IComparable<T1>
+        public class Node<T1> where T1 : IComparable<T>
         {
             public Node<T1> next { get; set; }
             public T1 data { get; set; }
@@ -178,6 +207,8 @@ namespace AlgorithmsAndDataStructuresUdemy
                 this.data = data;
                 this.next = next;
             }
+
+            
         }
 
     }
