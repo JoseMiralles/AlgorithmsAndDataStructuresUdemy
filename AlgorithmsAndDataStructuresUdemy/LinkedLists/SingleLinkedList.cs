@@ -40,7 +40,7 @@ namespace AlgorithmsAndDataStructuresUdemy
         }
 
         /// <summary>
-        /// Adds the given item at the start of the list. O(1) RT
+        /// Inserts the given item at the start of the list. O(1) RT
         /// </summary>
         public void Prepend(T item)
         {

@@ -10,6 +10,7 @@ namespace AlgorithmsAndDataStructuresUdemy
             var list = GetList(40);
 
 
+
             Console.WriteLine();
 
             Console.Read();
@@ -27,12 +28,6 @@ namespace AlgorithmsAndDataStructuresUdemy
         {
             SingleLinkedList<int> list = new SingleLinkedList<int>();
             List<int> randomList = new List<int>();
-            int rand = null;
-            for (int i = 1; i<= nums; i++)
-            {
-                do
-
-            }
 
             return list;
         }
